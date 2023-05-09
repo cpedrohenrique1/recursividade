@@ -13,9 +13,9 @@ public:
     QString imprimir(int n);
     QString par(int n);
     QString impar(int n);
-    QString somatorio(int n);
-    QString nPi();
-    QString Piaprox();
+    int somatorio(int n);
+    double nPi();
+    double Piaprox();
 };
 
 }

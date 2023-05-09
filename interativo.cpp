@@ -37,17 +37,17 @@ QString Pedro::interativo::impar(int n)
     return saida;
 }
 
-QString Pedro::interativo::somatorio(int n)
+int Pedro::interativo::somatorio(int n)
 {
     int soma = 0;
     for (int i = 1; i <= n; i++)
     {
         soma += i;
     }
-    return QString::number(soma);
+    return soma;
 }
 
-QString Pedro::interativo::nPi()
+double Pedro::interativo::nPi()
 {
     double pi = 4.0;
     double termo = 4.0 / 3.0;
@@ -58,10 +58,10 @@ QString Pedro::interativo::nPi()
         sinal *= -1;
         termo *= 4.0 / (3.0 + 2.0 * floor(pi / 2.0));
     }
-    return QString::number(pi);
+    return pi;
 }
 
-QString Pedro::interativo::Piaprox()
+double Pedro::interativo::Piaprox()
 {
     double pi = 0;
     int sinal = 1;
@@ -75,7 +75,7 @@ QString Pedro::interativo::Piaprox()
     pi *= 32;
     pi = std::pow(pi, 1.0/3);
     
-    return QString::number(pi);
+    return pi;
 }
 
 }

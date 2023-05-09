@@ -106,7 +106,7 @@ void MainWindow::on_pushButton_interativoSomatorio_clicked()
         {
             throw QString("Valor esta vazio");
         }
-        ui->textEdit_saida->setText(interativo.somatorio(ui->lineEdit_input->text().toInt()));
+        ui->textEdit_saida->setText(QString::number(interativo.somatorio(ui->lineEdit_input->text().toInt())));
         ui->lineEdit_input->clear();
     }
     catch ( QString &erro )
@@ -121,7 +121,7 @@ void MainWindow::on_pushButton_interativoPi_clicked()
     try
     {
         ui->lineEdit_input->clear();
-        ui->textEdit_saida->setText(interativo.nPi());
+        ui->textEdit_saida->setText(QString::number(interativo.nPi()));
     }
     catch ( QString &erro )
     {
@@ -135,7 +135,7 @@ void MainWindow::on_pushButton_interativoPiaprox_clicked()
     try
     {
         ui->lineEdit_input->clear();
-        ui->textEdit_saida->setText(interativo.Piaprox());
+        ui->textEdit_saida->setText(QString::number(interativo.Piaprox()));
     }
     catch ( QString &erro )
     {
@@ -186,9 +186,7 @@ void MainWindow::on_pushButton_recursivoPar_clicked()
         {
             throw QString("Valor esta vazio");
         }
-        recursivo.par(ui->lineEdit_input->text().toInt());
-        ui->textEdit_saida->setText(recursivo.getResultado());
-        recursivo.clear();
+        ui->textEdit_saida->setText(recursivo.par(ui->lineEdit_input->text().toInt()));
         ui->lineEdit_input->clear();
     }
     catch ( QString &erro )
@@ -214,9 +212,7 @@ void MainWindow::on_pushButton_recursivoImpar_clicked()
         {
             throw QString("Valor esta vazio");
         }
-        recursivo.impar(ui->lineEdit_input->text().toInt());
-        ui->textEdit_saida->setText(recursivo.getResultado());
-        recursivo.clear();
+        ui->textEdit_saida->setText(recursivo.impar(ui->lineEdit_input->text().toInt()));
         ui->lineEdit_input->clear();
     }
     catch ( QString &erro )
@@ -242,9 +238,7 @@ void MainWindow::on_pushButton_recursivoSomatorio_clicked()
         {
             throw QString("Valor esta vazio");
         }
-        recursivo.somatorio(ui->lineEdit_input->text().toInt());
-        ui->textEdit_saida->setText(recursivo.getResultado());
-        recursivo.clear();
+        ui->textEdit_saida->setText(QString::number(recursivo.somatorio(ui->lineEdit_input->text().toInt())));
         ui->lineEdit_input->clear();
     }
     catch ( QString &erro )
@@ -259,9 +253,7 @@ void MainWindow::on_pushButton_recursivoPi_clicked()
     try
     {
         ui->lineEdit_input->clear();
-        recursivo.nPi();
-        ui->textEdit_saida->setText(recursivo.getResultado());
-        recursivo.clear();
+        ui->textEdit_saida->setText(QString::number(recursivo.nPi()));
     }
     catch ( QString &erro )
     {
@@ -275,9 +267,7 @@ void MainWindow::on_pushButton_recursivoPiaprox_clicked()
     try
     {
         ui->lineEdit_input->clear();
-        recursivo.Piaprox();
-        ui->textEdit_saida->setText(recursivo.getResultado());
-        recursivo.clear();
+        ui->textEdit_saida->setText(QString::number(recursivo.Piaprox()));
     }
     catch ( QString &erro )
     {

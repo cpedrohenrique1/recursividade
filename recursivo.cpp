@@ -2,13 +2,7 @@
 
 namespace Pedro{
 
-QString recursivo::getResultado() const
-{
-    return resultado;
-}
-
-recursivo::recursivo():
-resultado("")
+recursivo::recursivo()
 {
 }
 
@@ -22,12 +16,7 @@ QString recursivo::imprimir(int n, int valor, QString resultado)
     return resultado;
 }
 
-void recursivo::clear()
-{
-    resultado = "";
-}
-
-void recursivo::par(int n, int valor)
+QString recursivo::par(int n, int valor, QString resultado)
 {
     if (valor <= n)
     {
@@ -35,11 +24,11 @@ void recursivo::par(int n, int valor)
         {
             resultado += QString::number(valor) + " ";
         }
-        return par(n, valor + 1);
+        return par(n, valor + 1, resultado);
     }
-    return;
+    return resultado;
 }
-void recursivo::impar(int n, int valor)
+QString recursivo::impar(int n, int valor, QString resultado)
 {
     if (valor <= n)
     {
@@ -47,21 +36,20 @@ void recursivo::impar(int n, int valor)
         {
             resultado += QString::number(valor) + " ";
         }
-        return impar(n, valor + 1);
+        return impar(n, valor + 1, resultado);
     }
-    return;
+    return resultado;
 }
-void recursivo::somatorio(int n, int valor, int soma)
+int recursivo::somatorio(int n, int valor, int soma)
 {
     if (valor <= n)
     {
         soma += valor;
         return somatorio(n, valor + 1, soma);
     }
-    resultado = QString::number(soma);
-    return;
+    return soma;
 }
-void recursivo::nPi(double pi, double termo, int sinal)
+double recursivo::nPi(double pi, double termo, int sinal)
 {
     if (abs(termo) >= 0.0001) {
         pi += sinal * termo;
@@ -69,11 +57,10 @@ void recursivo::nPi(double pi, double termo, int sinal)
         termo *= 4.0 / (3.0 + 2.0 * floor(pi / 2.0));
         return nPi(pi + (sinal * termo), termo *  (4.0 / (3.0 + 2.0 * floor(pi / 2.0))), sinal * (-1));
     }
-    resultado = QString::number(pi);
-    return;
+    return pi;
 }
 
-void recursivo::Piaprox(double pi, int sinal, int n)
+double recursivo::Piaprox(double pi, int sinal, int n)
 {
     if (n <= 51) {
         double termo = sinal * 1.0 / std::pow(2*n-1, 3);
@@ -82,7 +69,6 @@ void recursivo::Piaprox(double pi, int sinal, int n)
     
     pi *= 32;
     pi = std::pow(pi, 1.0/3);
-    resultado = QString::number(pi);
-    return;
+    return pi;
 }
 }
