@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <interativo.h>
+#include <iterativo.h>
 #include <recursivo.h>
 #include <QMessageBox>
 
@@ -19,17 +19,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_interativoImprimir_clicked();
-
-    void on_pushButton_interativoPar_clicked();
-
-    void on_pushButton_interativoImpar_clicked();
-
-    void on_pushButton_interativoSomatorio_clicked();
-
-    void on_pushButton_interativoPi_clicked();
-
-    void on_pushButton_interativoPiaprox_clicked();
 
     void on_pushButton_recursivoImprimir_clicked();
 
@@ -43,9 +32,21 @@ private slots:
 
     void on_pushButton_recursivoPiaprox_clicked();
 
+    void on_pushButton_iterativoImprimir_clicked();
+
+    void on_pushButton_iterativoPar_clicked();
+
+    void on_pushButton_iterativoImpar_clicked();
+
+    void on_pushButton_iterativoSomatorio_clicked();
+
+    void on_pushButton_iterativoPi_clicked();
+
+    void on_pushButton_iterativoPiaprox_clicked();
+
 private:
     Ui::MainWindow *ui;
-    Pedro::interativo interativo;
+    Pedro::iterativo iterativo;
     Pedro::recursivo recursivo;
 };
 #endif // MAINWINDOW_H

@@ -80,9 +80,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_interativoImprimir">
+        <widget class="QPushButton" name="pushButton_iterativoImprimir">
          <property name="text">
-          <string>Interativo</string>
+          <string>Iterativo</string>
          </property>
         </widget>
        </item>
@@ -105,9 +105,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_interativoPar">
+        <widget class="QPushButton" name="pushButton_iterativoPar">
          <property name="text">
-          <string>Interativo</string>
+          <string>Iterativo</string>
          </property>
         </widget>
        </item>
@@ -130,9 +130,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_interativoImpar">
+        <widget class="QPushButton" name="pushButton_iterativoImpar">
          <property name="text">
-          <string>Interativo</string>
+          <string>Iterativo</string>
          </property>
         </widget>
        </item>
@@ -155,9 +155,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_interativoSomatorio">
+        <widget class="QPushButton" name="pushButton_iterativoSomatorio">
          <property name="text">
-          <string>Interativo</string>
+          <string>Iterativo</string>
          </property>
         </widget>
        </item>
@@ -180,9 +180,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_interativoPi">
+        <widget class="QPushButton" name="pushButton_iterativoPi">
          <property name="text">
-          <string>Interativo</string>
+          <string>Iterativo</string>
          </property>
         </widget>
        </item>
@@ -205,9 +205,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_interativoPiaprox">
+        <widget class="QPushButton" name="pushButton_iterativoPiaprox">
          <property name="text">
-          <string>Interativo</string>
+          <string>Iterativo</string>
          </property>
         </widget>
        </item>
@@ -229,7 +229,7 @@
      <x>0</x>
      <y>0</y>
      <width>457</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
