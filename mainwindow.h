@@ -44,6 +44,14 @@ private slots:
 
     void on_pushButton_iterativoPiaprox_clicked();
 
+    void on_pushButton_iterativoNcubos_clicked();
+
+    void on_pushButton_iterativoNmnaturais_clicked();
+
+    void on_pushButton_recursivoNcubos_clicked();
+
+    void on_pushButton_recursivoNmnaturais_clicked();
+
 private:
     Ui::MainWindow *ui;
     Pedro::iterativo iterativo;

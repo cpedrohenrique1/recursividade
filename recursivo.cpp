@@ -10,7 +10,7 @@ QString recursivo::imprimir(int n, int valor, QString resultado)
 {
     if (valor <= n)
     {
-        resultado += QString::number(valor) + " ";
+        resultado += QString::number(valor) + ", ";
         return imprimir(n, valor + 1, resultado);
     }
     return resultado;
@@ -22,7 +22,7 @@ QString recursivo::par(int n, int valor, QString resultado)
     {
         if (valor % 2 == 0)
         {
-            resultado += QString::number(valor) + " ";
+            resultado += QString::number(valor) + ", ";
         }
         return par(n, valor + 1, resultado);
     }
@@ -34,7 +34,7 @@ QString recursivo::impar(int n, int valor, QString resultado)
     {
         if (valor % 2 != 0)
         {
-            resultado += QString::number(valor) + " ";
+            resultado += QString::number(valor) + ", ";
         }
         return impar(n, valor + 1, resultado);
     }
@@ -70,5 +70,23 @@ double recursivo::Piaprox(double pi, int sinal, int n)
     pi *= 32;
     pi = std::pow(pi, 1.0/3);
     return pi;
+}
+int recursivo::nCubos(int n, int i, int valor)
+{
+    if (i <= n)
+    {
+        valor += pow(i, 3);
+        return nCubos(n, i + 1, valor);
+    }
+    return valor;
+}
+QString recursivo::nmNaturais(int n, QString resultado)
+{
+    if (n >= 0)
+    {
+        resultado += QString::number(n) + ", ";
+        return nmNaturais(n - 1, resultado);
+    }
+    return resultado;
 }
 }

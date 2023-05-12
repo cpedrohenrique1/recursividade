@@ -16,6 +16,9 @@ public:
     int somatorio(int n);
     double nPi();
     double Piaprox();
+    int nCubos(int n);
+    QString nmNaturais(int n);
+    int menorElemento(int n);
 };
 
 }
