@@ -49,15 +49,15 @@ int recursivo::somatorio(int n, int valor, int soma)
     }
     return soma;
 }
-double recursivo::nPi(double pi, double termo, int sinal)
+double recursivo::nPi(int impar, int sinal)
 {
-    if (abs(termo) >= 0.0001) {
-        pi += sinal * termo;
-        sinal *= -1;
-        termo *= 4.0 / (3.0 + 2.0 * floor(pi / 2.0));
-        return nPi(pi + (sinal * termo), termo *  (4.0 / (3.0 + 2.0 * floor(pi / 2.0))), sinal * (-1));
+    if (4.0/impar > 0.0001) {
+        return (4.0/impar)*sinal+nPi(impar+2,sinal*(-1));
     }
-    return pi;
+    else
+    {
+        return 0;
+    }
 }
 
 double recursivo::Piaprox(double pi, int sinal, int n)
@@ -71,22 +71,5 @@ double recursivo::Piaprox(double pi, int sinal, int n)
     pi = std::pow(pi, 1.0/3);
     return pi;
 }
-int recursivo::nCubos(int n, int i, int valor)
-{
-    if (i <= n)
-    {
-        valor += pow(i, 3);
-        return nCubos(n, i + 1, valor);
-    }
-    return valor;
-}
-QString recursivo::nmNaturais(int n, QString resultado)
-{
-    if (n >= 0)
-    {
-        resultado += QString::number(n) + ", ";
-        return nmNaturais(n - 1, resultado);
-    }
-    return resultado;
-}
+
 }

@@ -49,14 +49,14 @@ int Pedro::iterativo::somatorio(int n)
 
 double Pedro::iterativo::nPi()
 {
-    double pi = 4.0;
-    double termo = 4.0 / 3.0;
-    int sinal = -1;
+    double pi = 0;
+    int impar = 1;
+    int sinal = 1;
     
-    while (abs(termo) >= 0.0001) {
-        pi += sinal * termo;
+    while (4.0/impar > 0.0001) {
+        pi += sinal*(4.0/impar);
+        impar += 2;
         sinal *= -1;
-        termo *= 4.0 / (3.0 + 2.0 * floor(pi / 2.0));
     }
     return pi;
 }
@@ -66,39 +66,16 @@ double Pedro::iterativo::Piaprox()
     double pi = 0;
     int sinal = 1;
     
-    for (int i = 1; i <= 51; i++) {
-        double termo = sinal * 1.0 / std::pow(2*i-1, 3);
+    for (int i = 1; i <= 102; i+=2) {
+        double termo = sinal * 1.0 / std::pow(i, 3);
         pi += termo;
         sinal *= -1;
     }
     
     pi *= 32;
-    pi = std::pow(pi, 1.0/3);
+    pi = std::pow(pi, 1.0/3.0);
     
     return pi;
 }
 
-int iterativo::nCubos(int n)
-{
-    int valor = 0;
-    for (int i = 1; i <= n; i++)
-    {
-        valor += pow(i, 3);
-    }
-    return valor;
-}
-QString iterativo::nmNaturais(int n)
-{
-    QString resultado = "";
-    for (int i = n; i >= 0; i--)
-    {
-        resultado += QString::number(i) + ", ";
-    }
-    return resultado;
-}
-int iterativo::menorElemento(int n)
-{
-    return 2;
-    
-}
 }
